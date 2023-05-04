@@ -25,7 +25,7 @@ html {
 }
 
 body{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -48,16 +48,11 @@ section {
     position: fixed;
     width: 100%;
     margin: auto;
-    padding: 10px 100px;
+    padding: 10px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    /*padding: 10px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;*/
 }
 
 .navbar.sticky {
@@ -311,6 +306,7 @@ section {
 
 .about-col-2 {
     flex-basis: 60%;
+    padding-top: 4rem;
 }
 
 .about-col-2 p {
@@ -320,8 +316,11 @@ section {
     animation-delay: 1s;
 }
 
-.heading {
-    padding-top: 4rem;
+.about-col-2 .btn {
+    margin-top: 2rem;
+}
+
+.sub-title {
     font-weight: 600;
     font-size: 4.5rem;
     opacity: 0;
@@ -330,7 +329,7 @@ section {
     
 }
 
-.heading span {
+.sub-title span {
     background: linear-gradient(45deg, #f06,blue);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -390,6 +389,211 @@ section {
     display: block;
 }
 /* About section ends......*/
+/* Education section starts....*/
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+
+.heading span {
+    background: linear-gradient(45deg, #f06,blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.education-content {
+    display: block;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.education-content .heading {
+   margin-bottom: 50px;
+}
+
+.card {
+    width: 45%;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    margin:  -40px 0;
+    position: relative;
+    background: linear-gradient(45deg, #f06,blue);
+}
+
+.card:nth-child(even) {
+     margin-left: auto;
+}
+
+.card:nth-child(even):before {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(even):after {
+    content: '';
+    position: absolute;
+    left: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+    
+}
+
+.card:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    right: -13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 5px solid #191919;
+    border-radius: 50%;
+}
+
+.card:nth-child(odd):after {
+    content: '';
+    position: absolute;
+    right: -8.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.card:nth-child(2), .card:nth-child(2):before {
+    background: linear-gradient(45deg, #f06,blue);
+}
+.card:nth-child(3), .card:nth-child(3):before {
+    background: linear-gradient(45deg, #f06,blue);
+}
+.card:nth-child(4), .card:nth-child(4):before {
+    background: linear-gradient(45deg, #f06,blue);
+}
+
+.card:nth-child(even) .card-body:before {
+    content: '';
+    position: absolute;
+    left: -12%;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed #fff;
+    z-index: -1;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    font-size: 14.5px;
+    margin-bottom: 5px;
+}
+
+.card-detail {
+    font-size: 14px;
+}
+
+/*Education section ends...*/
+
+/* Contact section starts....*/
+.hireme h2 {
+    margin-top: 3rem;
+}
+
+.hireme form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hireme form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hireme form .input-box input,
+.hireme form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.hireme form .input-box input {
+    width: 49%;
+}
+
+.hireme form textarea {
+    resize: none;
+}
+
+.hireme form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+/*Contact section ends....*/
+
+/* Footer section starts...*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 16px;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: linear-gradient(45deg, #f06,blue);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* Footer section ends....*/
 
 
 
